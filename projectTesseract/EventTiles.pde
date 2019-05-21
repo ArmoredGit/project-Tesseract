@@ -16,6 +16,7 @@ public class eventTiles{
       case 4:
         p.setSubSquare(1,3,1);
         break;
+      //menu world
       case 5:
         p.setLevel(1);
         playState = 1;
@@ -61,6 +62,7 @@ public class eventTiles{
       case 16:
         p.setSubSquare(5,3,0);
         break;
+      //level 7
       case 17:
         p.setSubSquare(2,4,3);
         break;
@@ -78,6 +80,31 @@ public class eventTiles{
         break;
       case 21:
         p.setSubSquare(6,1,0);
+        break;
+      //level 8
+      case 22:
+        p.setSubSquare(2,3,0);
+        break;
+      case 23:
+        p.setSubSquare(0,3,0);
+        break;
+      case 24:
+        p.setSubSquare(1,2,0);
+        break;
+      case 25:
+        p.setSubSquare(4,6,0);
+        break;
+      case 26:
+        p.setSubSquare(4,0,0);
+        break;
+      case 27:
+        p.setSubSquare(6,1,0);
+        break;
+      case 28:
+        p.setSubSquare(5,2,0);
+        break;
+      case 29:
+        p.setSubSquare(5,4,0);
         break;
       default:
         break;
@@ -112,6 +139,18 @@ public class eventTiles{
         break;
       case 21:
         p.setSubSquare(6,1,1);
+        break;
+      case 26:
+        p.setSubSquare(4,0,1);
+        break;
+      case 27:
+        p.setSubSquare(6,1,1);
+        break;
+      case 28:
+        p.setSubSquare(5,2,1);
+        break;
+      case 29:
+        p.setSubSquare(5,4,1);
         break;
       default:
         break;
@@ -156,8 +195,6 @@ public class eventTiles{
   
   public PImage pActiveEventdraw(int id){
     switch(id){
-      case 1:
-        return pressButton;
       case 5:
         return levelButton1;
       case 6:

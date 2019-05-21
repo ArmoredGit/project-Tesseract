@@ -22,18 +22,72 @@ PImage lava;
 PImage lavaBurn;
 PImage grid;
 PImage gridBurn;
-int playState = 0;
+int playState;
+int load = 0;
 String view;
-library li = new library();
-manager p = new manager(0,0,1);
-eventTiles e = new eventTiles();
-Menu m = new Menu();
-PopUp q = new PopUp();
+library li;
+manager p;
+eventTiles e;
+Menu m;
+PopUp q;
+
 void setup(){
-  textAlign(CENTER);
   size(1008,1008);
-  textSize(40);
+  background(0);
   player = loadImage("character.png");
+}
+
+void draw(){
+  if(load == 0){
+    loadingScreen();
+    load = 1;
+  }else if(load == 1){
+    loadAll();
+    load = 2;
+  }else{
+    if(playState == 0){
+      background(0);
+      text("[ Press key to Play ]", width / 2, width / 2);
+    }else if(playState == 1){
+      background(0);
+      p.drawGame();
+      p.triggerEvents();
+      fill(255);
+      int[] pos = p.getCords();
+      //adjust text based on level world!
+      text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
+    }else if(playState == 3){
+      q.drawPopUp();
+    }else if(playState == 4){
+      background(255);
+      m.drawGame();
+      m.triggerEvents();
+      fill(0);
+      text("world #" + m.worldNum(), width / 2, width / 11);
+    }else if(playState == 5){
+      background(0);
+      fill(255, 60, 25);
+      text("Well, you died...", width / 2, width / 4);
+      fill(255);
+      text("[ Press key to Play ]", width / 2, width / 2);
+    }
+  }
+}
+
+void loadingScreen(){
+  textAlign(CENTER);
+  textSize(40);
+  image(player,width/4,width/4,width/2,width/2);
+  text("LOADING. . .",width/2,width/2);
+}
+
+void loadAll(){
+  playState = 0;
+  li = new library();
+  p = new manager(0,0,1);
+  e = new eventTiles();
+  m = new Menu();
+  q = new PopUp();
   evenFloor = loadImage("evenFloor.png");
   button = loadImage("unPressedButton.png");
   evenWall = loadImage("evenWall.png");
@@ -57,35 +111,6 @@ void setup(){
   lavaBurn = loadImage("lavaBurn.png");
   grid = loadImage("grid.png");
   gridBurn = loadImage("gridBurn.png");
-}
-
-void draw(){
-  if(playState == 0){
-    background(0);
-    text("[ Press key to Play ]", width / 2, width / 2);
-  }else if(playState == 1){
-    background(0);
-    p.drawGame();
-    p.triggerEvents();
-    fill(255);
-    int[] pos = p.getCords();
-    //adjust text based on level world!
-    text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
-  }else if(playState == 3){
-    q.drawPopUp();
-  }else if(playState == 4){
-    background(255);
-    m.drawGame();
-    m.triggerEvents();
-    fill(0);
-    text("world #" + m.worldNum(), width / 2, width / 11);
-  }else if(playState == 5){
-    background(0);
-    fill(255, 60, 25);
-    text("Well, you died...", width / 2, width / 4);
-    fill(255);
-    text("[ Press key to Play ]", width / 2, width / 2);
-  }
 }
 
 void keyPressed(){
