@@ -101,9 +101,24 @@ public class levelSlicer{
     return _y;
   }
   
+  public int getSubSquare(int x, int y){
+    //sets the point in the tesseract by giving 2d cords of the slice
+    int i = 0;
+    if(_rotation == 1){
+      i = teseract[_w][_z][y][x];
+    }else if(_rotation == 2){
+      i = teseract[_w][y][_y][x];
+    }else if(_rotation == 3){
+      i = teseract[y][_z][_y][x];
+    }
+    return i;
+  }
+  
   public int setSubSquare(int x, int y, int set){
     //sets the point in the tesseract by giving 2d cords of the slice
     int i = 0;
+    if(set == 0 && getSubSquare(x,y) == 3)
+      set = 3;
     if(_rotation == 1){
       i = teseract[_w][_z][y][x];
       teseract[_w][_z][y][x] = set;

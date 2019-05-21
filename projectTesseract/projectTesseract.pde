@@ -1,4 +1,3 @@
-boolean win = false;
 PImage button;
 PImage pressButton;
 PImage pressButtonWBlock;
@@ -70,6 +69,7 @@ void draw(){
     p.triggerEvents();
     fill(255);
     int[] pos = p.getCords();
+    //adjust text based on level world!
     text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
   }else if(playState == 3){
     q.drawPopUp();
