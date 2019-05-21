@@ -2,4 +2,5 @@
 __________________
 
 ## Project-Tesseract
-###   Puzzle & thinking game ### *By Miles Leska*
+###   Puzzle & thinking game 
+*By Miles Leska*
