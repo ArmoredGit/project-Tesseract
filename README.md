@@ -42,6 +42,8 @@ ezmple 4D maze.
 
 * [Processing](https://processing.org/) - The IDE used
 
+* [Paint.net](https://www.getpaint.net/index.html) - artwork tool
+
 ## Authors
 
 * **Miles Leska** 
