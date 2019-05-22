@@ -49,7 +49,7 @@ void draw(){
     if(playState == 0){
       background(0);
       image(logo1,width/4,width/4,width/2,width/2);
-      text("[ Press key to Play ]", width / 2, width / 2);
+      text("[ Press key to Play ]", width / 2, 3 * width / 4);
     }else if(playState == 1){
       background(0);
       p.drawGame();
