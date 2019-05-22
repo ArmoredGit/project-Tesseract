@@ -16,7 +16,7 @@ For a while cubes could be pushed through wall to turn them to buttons.
 ### Most interesting piece of your code and explanation for what it does.
 
 ```java
-{{
+      {{
       {{0,0,1,0},  {0,0,1,0},  {1,0,0,0},  {0,1,0,1}},
       {{1,1,0,0},  {0,0,0,1},  {0,1,1,1},  {0,0,1,0}},
       {{0,0,0,1},  {0,1,1,0},  {1,0,0,0},  {0,1,0,1}},
