@@ -22,6 +22,7 @@ PImage lava;
 PImage lavaBurn;
 PImage grid;
 PImage gridBurn;
+PImage logo1;
 int playState;
 int load = 0;
 String view;
@@ -47,6 +48,7 @@ void draw(){
   }else{
     if(playState == 0){
       background(0);
+      image(logo1,width/4,width/4,width/2,width/2);
       text("[ Press key to Play ]", width / 2, width / 2);
     }else if(playState == 1){
       background(0);
@@ -111,6 +113,7 @@ void loadAll(){
   lavaBurn = loadImage("lavaBurn.png");
   grid = loadImage("grid.png");
   gridBurn = loadImage("gridBurn.png");
+  logo1 = loadImage("logo1.png");
 }
 
 void keyPressed(){
