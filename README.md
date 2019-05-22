@@ -9,7 +9,9 @@ A puzzle game challenging players to think and act creatively while thinking in 
 ### Difficulties or opportunities you encountered along the way.
 
 The toughest part was mostly the level design.
-
+  This just takes a lot of time.
+For a while cubes could be pushed through wall to turn them to buttons.
+  As you might know things are things and they often colide, but unoften combine to a new form.
 
 ### Most interesting piece of your code and explanation for what it does.
 
