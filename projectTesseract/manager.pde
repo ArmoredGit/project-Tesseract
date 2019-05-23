@@ -198,8 +198,8 @@ public class manager extends levelSlicer{
     
     for(int i = 0; i < l; i++){
       for(int j = 0; j < l; j++){
-        if((arr[i][j]%10 != 4 || _tx != i || _ty != j) && (arr[i][j]%10 != 7)){
-          e.undoEvent(arr[i][j]/10);
+        if((arr[j][i]%10 != 4 || _tx != j || _ty != i) && (arr[j][i]%10 != 7)){
+          e.undoEvent(arr[j][i]/10);
         }
       }
     }
