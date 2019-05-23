@@ -125,6 +125,13 @@ public class eventTiles{
       case 35:
         p.setSubSquare(6,8,0);
         break;
+      case 36:
+        p.setSubSquare(3,5,6);
+        break;
+      case 37:
+        p.setSubSquare(1,6,5);
+        p.setSubSquare(0,7,5);
+        break;
       default:
         break;
     }
@@ -186,6 +193,13 @@ public class eventTiles{
         break;
       case 35:
         p.setSubSquare(6,8,1);
+        break;
+      case 36:
+        p.setSubSquare(3,5,1);
+        break;
+      case 37:
+        p.setSubSquare(1,6,0);
+        p.setSubSquare(0,7,1);
         break;
       default:
         break;
