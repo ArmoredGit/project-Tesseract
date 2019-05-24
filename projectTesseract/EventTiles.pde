@@ -141,6 +141,13 @@ public class eventTiles{
       case 41:
         p.setSubSquare(2,1,367);
         break;
+      //menu world
+      case 42:
+        m.nextWorld();
+        break;
+      case 43:
+        m.prevWorld();
+        break;
       default:
         break;
     }
