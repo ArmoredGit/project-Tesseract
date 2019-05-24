@@ -23,6 +23,7 @@ PImage lavaBurn;
 PImage grid;
 PImage gridBurn;
 PImage logo1;
+PImage keys;
 int playState;
 int load = 0;
 String view;
@@ -56,6 +57,7 @@ void draw(){
       p.triggerEvents();
       fill(255);
       int[] pos = p.getCords();
+      image(keys,0,0,width/4,width/4);
       //adjust text based on level world!
       text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
     }else if(playState == 3){
@@ -114,6 +116,7 @@ void loadAll(){
   grid = loadImage("grid.png");
   gridBurn = loadImage("gridBurn.png");
   logo1 = loadImage("logo1.png");
+  keys = loadImage("key.png");
 }
 
 void keyPressed(){
