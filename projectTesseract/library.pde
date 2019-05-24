@@ -50,6 +50,7 @@ public class library{
     int[][][][][] s9 = {{{{{9,1,1}}}},levelMapSelecter(level)};
     int[][][][][] t3 = {{{{{3,1,3}}}},levelMapSelecter(level)};
     int[][][][][] t4 = {{{{{4,1,3}}}},levelMapSelecter(level)};
+    int[][][][][] c1 = {{{{{3,1,2}}}},levelMapSelecter(level)};
     switch(level){
       case 1:
         return s1;
@@ -69,6 +70,8 @@ public class library{
         return s8;
       case 9:
         return s9;
+      case 10:
+        return c1;
       default:
         return t4;
     }
@@ -177,6 +180,11 @@ public class library{
       int[][][][] s9 = {{
       {{0,5,6,6,6,0,0,6,304},{0,317,364,6,1,0,0,0,6},{0,354,324,6,1,0,5,5,5},{0,5,6,6,1,0,0,0,334},{6,1,1,1,1,1,1,1,1},{0,3,374,1,1,6,3,6,414},{397,0,1,0,1,6,3,0,6},{1,0,384,1,1,1,1,1,1},{6,407,5,344,1,2,1,0,0}}}};
       
+      int[][][][] c1 = {{
+        {{0,0,454},{1,1,1},{444,0,2}},
+        {{0,0,0},{1,1,1},{0,1,1}},
+        {{444,0,0},{0,0,0},{0,0,454}}}};
+      
     switch(level){
       case 1:
         return s1;
@@ -196,6 +204,8 @@ public class library{
         return s8;
       case 9:
         return s9;
+      case 10:
+        return c1;
       default:
         return t4;
     }

@@ -36,6 +36,10 @@ public class manager extends levelSlicer{
     playState = 5;
   }
   
+  public int getLevel(){
+    return _level;
+  }
+  
   public void move(int direction){
     //moves you across the screendoor unless in the tesseract you would be hitting something in tesseract
     //1 up, 2 left, 3 down, 4 right

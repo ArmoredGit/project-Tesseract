@@ -87,6 +87,11 @@ public class levelSlicer{
     //swaps to the next plane ex. xy to xz
   }
   
+  public void setPlane(int r){
+    _rotation = r;
+    //swaps to the next plane ex. xy to xz
+  }
+  
   public int fixY(){
     if(_rotation == 1){
       view = "X/Y";

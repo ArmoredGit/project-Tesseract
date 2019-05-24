@@ -24,6 +24,8 @@ PImage grid;
 PImage gridBurn;
 PImage logo1;
 PImage keys;
+PImage rotate;
+PImage unrotate;
 int playState;
 int load = 0;
 String view;
@@ -59,7 +61,15 @@ void draw(){
       int[] pos = p.getCords();
       image(keys,0,0,width/4,width/4);
       //adjust text based on level world!
-      text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
+      if(p.getLevel() < 10){
+        text("You are at X: " + pos[0] + ", Y: " + pos[1], width / 2, width / 11);
+      }else if(p.getLevel() < 19){
+        text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", view is " + view, width / 2, width / 11);
+      }else if(p.getLevel() < 28){
+        text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
+      }else if(p.getLevel() < 37){
+        text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
+      }
     }else if(playState == 3){
       q.drawPopUp();
     }else if(playState == 4){
@@ -117,6 +127,8 @@ void loadAll(){
   gridBurn = loadImage("gridBurn.png");
   logo1 = loadImage("logo1.png");
   keys = loadImage("key.png");
+  rotate = loadImage("PressedButtonRotate.png");
+  unrotate = loadImage("unPressedButtonRotate.png");
 }
 
 void keyPressed(){
@@ -137,9 +149,11 @@ void keyPressed(){
         p.move(1);
         break;
       case 81:
+        if(p.getLevel() > 18)
         p.rotatePlane(-1);
         break;
       case 69:
+        if(p.getLevel() > 18)
         p.rotatePlane(1);
         break;
       case 82:

@@ -148,6 +148,12 @@ public class eventTiles{
       case 43:
         m.prevWorld();
         break;
+      case 44:
+        p.setPlane(1);
+        break;
+      case 45:
+        p.setPlane(2);
+        break;
       default:
         break;
     }
@@ -250,6 +256,10 @@ public class eventTiles{
         return levelButton8;
       case 13:
         return levelButton9;
+      case 44:
+        return unrotate;
+      case 45:
+        return unrotate;
       default:
         return button;
     }
@@ -284,6 +294,10 @@ public class eventTiles{
         return levelButton8;
       case 13:
         return levelButton9;
+      case 44:
+        return rotate;
+      case 45:
+        return rotate;
       default:
         return pressButton;
     }
