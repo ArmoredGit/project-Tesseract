@@ -1,7 +1,10 @@
 public class Menu extends levelSlicer {
+  //this controls the menu world
+  //define character position and veiw
   private int _tx, _ty;
   private int _size, _world;
 
+  //constructor gets the map from the library
   public Menu() {
     super(7, 1, 1);
     _world = 1;
@@ -11,10 +14,12 @@ public class Menu extends levelSlicer {
     _size = li.menuSelecter(1)[0][0][0][0][0];
   }
   
+  //for writeup/ dsplay reasons
   public int worldNum(){
     return _world;
   }
   
+  //brings character to the menue they were in
   public void warpWorld() {
     super.restart(7, 1, 1);
     setLevel(li.menuSelecter(_world)[1]);
@@ -22,6 +27,7 @@ public class Menu extends levelSlicer {
     _ty = 0;
   }
 
+  //brings character to the next menue
   public void nextWorld() {
     _world++;
     super.restart(7, 1, 1);
@@ -30,6 +36,7 @@ public class Menu extends levelSlicer {
     _ty = 0;
   }
   
+  //brings character to the previous menue
   public void prevWorld() {
     _world--;
     super.restart(7, 1, 1);
@@ -38,6 +45,7 @@ public class Menu extends levelSlicer {
     _ty = 0;
   }
 
+  //moves the character 
   public void move(int direction) {
     //moves you across the screendoor unless in the tesseract you would be hitting something in tesseract
     //1 up, 2 left, 3 down, 4 right
@@ -74,6 +82,7 @@ public class Menu extends levelSlicer {
     setSubCords(_tx, _ty);
   }
   
+  //draws... well the menu actually 
   public void drawGame(){
     //draws the full game that you can see projected
     _ty = fixY();
@@ -109,6 +118,7 @@ public class Menu extends levelSlicer {
     image(player,_tx * w / l, a + _ty * w / l, w / l, w / l);
   }
   
+  //calls all button events
   public void triggerEvents(){
     //serches for events and triggers them and undose them if req are no longer met
     int l = getSlice().length;

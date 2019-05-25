@@ -1,7 +1,11 @@
 public class eventTiles{
+  //this class references what happens regarding buttons
+  
+  //nothing needed for constuctor, but I did not want to make a static class
   public eventTiles(){
   }
   
+  //What happens when a button is pressed ref by ID
   public void event(int id){
     switch(id){
       case 1:
@@ -159,6 +163,7 @@ public class eventTiles{
     }
   }
   
+  //What happens when a button is not pressed ref by ID
   public void undoEvent(int id){
     switch(id){
       case 3:
@@ -234,6 +239,7 @@ public class eventTiles{
     }
   }
   
+  //What a button looks like, while not pressed ref by ID
   public PImage eventdraw(int id){
     switch(id){
       case 1:
@@ -265,6 +271,7 @@ public class eventTiles{
     }
   }
   
+  //What a button looks like, while pressed by a cube ref by ID
   public PImage activeEventdraw(int id){
     switch(id){
       case 1:
@@ -274,6 +281,7 @@ public class eventTiles{
     }
   }
   
+  //What a button looks like, while pressed by a player ref by ID
   public PImage pActiveEventdraw(int id){
     switch(id){
       case 5:

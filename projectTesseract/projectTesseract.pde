@@ -1,3 +1,6 @@
+//Final project : Project-Tesseract 
+//created by miles Leska
+
 PImage button;
 PImage pressButton;
 PImage pressButtonWBlock;
@@ -35,30 +38,39 @@ eventTiles e;
 Menu m;
 PopUp q;
 
+//the setup method is short in order to quickly open the program 
 void setup(){
   size(1008,1008);
   background(0);
   player = loadImage("character.png");
 }
 
+//draw method will both call drawing methods and handle the loading of the game
 void draw(){
   if(load == 0){
+    //this case draws the loading screen before the majority of the program's loading is done
     loadingScreen();
     load = 1;
   }else if(load == 1){
+    //this calls to load the program
     loadAll();
     load = 2;
   }else{
+    //this draws the game once loading is finished
     if(playState == 0){
+      //start menu drawing
       background(0);
       image(logo1,width/4,width/4,width/2,width/2);
       text("[ Press key to Play ]", width / 2, 3 * width / 4);
-    }else if(playState == 1){
+    }else if(playState == 1){ 
       background(0);
+      //draws the game
       p.drawGame();
+      //triggers all buttons on/off
       p.triggerEvents();
       fill(255);
       int[] pos = p.getCords();
+      //draws the key hints top left
       image(keys,0,0,width/4,width/4);
       //adjust text based on level world!
       if(p.getLevel() < 10){
@@ -71,14 +83,17 @@ void draw(){
         text("X: " + pos[0] + ", Y: " + pos[1] + ", Z: " + pos[2] + ", W: " + pos[3] + ", view is " + view, width / 2, width / 11);
       }
     }else if(playState == 3){
+      //pop up menu at the end of each level
       q.drawPopUp();
     }else if(playState == 4){
+      //draws the menu world
       background(255);
       m.drawGame();
       m.triggerEvents();
       fill(0);
       text("world #" + m.worldNum(), width / 2, width / 11);
     }else if(playState == 5){
+      //this is the death screen that pos up when you die
       background(0);
       fill(255, 60, 25);
       text("Well, you died...", width / 2, width / 4);
@@ -88,6 +103,7 @@ void draw(){
   }
 }
 
+//the actual loading screen to be shown when you open the game
 void loadingScreen(){
   textAlign(CENTER);
   textSize(40);
@@ -95,6 +111,7 @@ void loadingScreen(){
   text("LOADING. . .",width/2,width/2);
 }
 
+//similar to setup this loads all game resources after the splash screen is displayed
 void loadAll(){
   playState = 0;
   li = new library();
@@ -131,10 +148,13 @@ void loadAll(){
   unrotate = loadImage("unPressedButtonRotate.png");
 }
 
+//this manages input for all the classes
 void keyPressed(){
   if(playState == 0){
+    //starts the game
     playState = 1;
   }else if(playState == 1){
+    //main game
     switch(keyCode){
       case 87:
         p.move(4);
@@ -164,6 +184,7 @@ void keyPressed(){
         break;
     }
   }else if(playState == 3){
+    //popup at the end of levels
     switch(keyCode){
       case 81:
         p.nextLevel();
@@ -175,6 +196,7 @@ void keyPressed(){
         break;
     }
   }else if(playState == 4){
+    //level menu navigation
     switch(keyCode){
       case 87:
         m.move(4);
@@ -190,6 +212,7 @@ void keyPressed(){
         break;
     }
   }else if(playState == 5){
+    //death restart 
     playState = 1;
   }
 }
