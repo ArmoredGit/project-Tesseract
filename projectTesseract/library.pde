@@ -1,10 +1,13 @@
 public class library{
+  //this class contains all the levels played in the game and some not played in the game and some not
+  
+  //nothing needed for constuctor, but I did not want to make a static class
   public library(){
     
   }
   
   //format for returrned levels is {{{{{_size,_plane,_planeCount}}}},tesseract} ~ eventualy may add an arrray of sprite references
-  
+  //this selects and returns a level from the levels used for mechanics and bug testing
   public int[][][][][] demoSelecter(int level){
     int[][][][][] a = {{{{{7,1,1}}}},demoMapSelecter(level)};
     switch(level){
@@ -13,6 +16,7 @@ public class library{
     }
   }
   
+  //this selects and returns a level from the levels used for menu world
   public int[][][][][] menuSelecter(int level){
     int[][][][][] w1 = {{{{{7,1,1}}}},menuMapSelecter(level)};
     int[][][][][] w2 = {{{{{7,1,1}}}},menuMapSelecter(level)};
@@ -38,6 +42,7 @@ public class library{
     }
   }
   
+  //this selects and returns a level from the levels used for playing the main game
   public int[][][][][] levelSelecter(int level){
     int[][][][][] s1 = {{{{{4,1,1}}}},levelMapSelecter(level)};
     int[][][][][] s2 = {{{{{4,1,1}}}},levelMapSelecter(level)};
@@ -77,6 +82,7 @@ public class library{
     }
   }
   
+  ////this selects and returns a level from the levels maps used for mechanics and bug testing
   public int[][][][] demoMapSelecter(int level){
     int[][][][] a = {{
       {{0,0,0,0,0,0,0},{0,3,0,0,0,0,0},{0,3,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,4,0,1,0,2,0},{174,0,0,0,0,0,0}}}};
@@ -86,6 +92,7 @@ public class library{
     }
   }
   
+  //this selects and returns a level map from the levels used for menu world
   public int[][][][] menuMapSelecter(int level){
     int[][][][] w1 = {{
       {{0,0,0,0,0,0,0},{0,54,0,64,0,74,0},{0,0,0,0,0,0,0},{0,84,0,94,0,104,0},{0,0,0,0,0,0,0},{0,114,0,124,0,134,0},{0,0,0,0,0,0,424}}}};
@@ -118,6 +125,7 @@ public class library{
     }
   }
   
+  //this selects and returns a level map from the levels used for playing the main game
   public int[][][][] levelMapSelecter(int level){
     int[][][][] t4 = {{
       {{0,0,1,0},  {0,0,1,0},  {1,0,0,0},  {0,1,0,1}},

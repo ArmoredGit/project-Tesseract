@@ -1,9 +1,15 @@
 public class manager extends levelSlicer{
   private int _tx,_ty;
   private int _size,_level;
+  //this class manages the level class at a more abstacted view in order to play the main game
+  //it returns needed values and all around runs the game 
+  
+  //blank constuctor for loading reasons 
   public manager(){
     super(0,0,0);
   }
+  
+  //constuctor loads in the level and needed variables
   public manager(int x, int y,int level){
     super(li.levelSelecter(level)[0][0][0][0][0],li.levelSelecter(level)[0][0][0][0][1],li.levelSelecter(level)[0][0][0][0][2]);
     _level = level;
@@ -13,6 +19,7 @@ public class manager extends levelSlicer{
     _size = li.levelSelecter(level)[0][0][0][0][0];
   }
   
+  //resets the level 
   public void restart(){
     super.restart(li.levelSelecter(_level)[0][0][0][0][0],li.levelSelecter(_level)[0][0][0][0][1],li.levelSelecter(_level)[0][0][0][0][2]);
     setLevel(li.levelSelecter(_level)[1]);
@@ -21,25 +28,30 @@ public class manager extends levelSlicer{
     _size = li.levelSelecter(_level)[0][0][0][0][0];
   }
   
+  //go to the next level
   public void nextLevel(){
     _level++;
     restart();
   }
   
+  //sets the level to level x
   public void setLevel(int x){
     _level = x;
     restart();
   }
   
+  //restarts the level and displays the dead screen
   public void kill(){
     restart();
     playState = 5;
   }
   
+  //returns the current level
   public int getLevel(){
     return _level;
   }
   
+  //moves the character in direction
   public void move(int direction){
     //moves you across the screendoor unless in the tesseract you would be hitting something in tesseract
     //1 up, 2 left, 3 down, 4 right
@@ -88,6 +100,7 @@ public class manager extends levelSlicer{
     setSubCords(_tx,_ty);
   }
   
+  //checks if a block can be pushed in direction
   private boolean pushBlocks(int direction){
     //pushes blocks, returns true if it happened
     switch(direction){
@@ -131,6 +144,7 @@ public class manager extends levelSlicer{
     return true;
   }
   
+  //draws the game 
   public void drawGame(){
     //draws the full game that you can see projected
     _ty = fixY();
@@ -188,6 +202,7 @@ public class manager extends levelSlicer{
     }
   }
   
+  //runs all buttons and kills all cubes in iligal areas 
   public void triggerEvents(){
     //serches for events and triggers them and undose them if req are no longer met
     int l = getSlice().length;
