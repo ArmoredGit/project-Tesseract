@@ -5,6 +5,10 @@ public class levelSlicer{
   private int _z;
   private int _w;
   private int[][][][] teseract;
+  //level is the base class for master class for manager and menu
+  //level holds, modifies, and outputs views of squares, cubes, and tesseracts
+  
+  //the constucter saves all variables needed and prepares the tesseract array for the level
   public levelSlicer(int size, int plane, int planes){
     _size = size;
     _planeCount = planes;
@@ -17,6 +21,7 @@ public class levelSlicer{
     _w = 0;
   }
   
+  //as it says this restarts the level and wipes the tesseract array 
   public void restart(int size, int plane, int planes){
     _size = size;
     _planeCount = planes;
@@ -33,10 +38,12 @@ public class levelSlicer{
   //x is the rotational acess and doesn't change upon spin
   //planes are 1 = xy , 2 = xz , 3 = xw
   
+  //used to set the tesseract array to the current level 
   public void setLevel(int[][][][] arr){
     teseract = arr;
   }
   
+  //sets the players cordanates in absolute cordinates IE X,Y,Z,W
   public void setCords(int x, int y, int z, int w){
     _x = x;
     _y = y;
@@ -44,11 +51,13 @@ public class levelSlicer{
     _w = w;
   }
   
+  //gets the players cordanates in absolute cordinates IE X,Y,Z,W
   public int[] getCords(){
     int[] arr = {_x,_y,_z,_w};
     return arr;
   }
   
+  //sets the players cordanates in relitive cordinates IE X,Y or X,W in the plane they currently in
   public void setSubCords(int x, int y){
     if(_rotation == 1){
       _y = y;
@@ -62,6 +71,7 @@ public class levelSlicer{
     }
   }
   
+  //returns a square slice from the players current view 
   public int[][] getSlice(){
     // get the 2D slice of the tesseract
     int[][] arr = new int[_size][_size];
@@ -78,6 +88,7 @@ public class levelSlicer{
     return arr;
   }
   
+  //rotates to the next view 
   public void rotatePlane(int r){
     _rotation += r;
     if(_rotation < 1)
@@ -87,11 +98,13 @@ public class levelSlicer{
     //swaps to the next plane ex. xy to xz
   }
   
+  //sets the 2D view
   public void setPlane(int r){
     _rotation = r;
     //swaps to the next plane ex. xy to xz
   }
   
+  //when the player rotates this fixes their non X position in 2D and edits the view
   public int fixY(){
     if(_rotation == 1){
       view = "X/Y";
@@ -106,8 +119,8 @@ public class levelSlicer{
     return _y;
   }
   
+  //returns what is at a position X,Y in a slice that the character is in
   public int getSubSquare(int x, int y){
-    //sets the point in the tesseract by giving 2d cords of the slice
     int i = 0;
     if(_rotation == 1){
       i = teseract[_w][_z][y][x];
@@ -119,6 +132,7 @@ public class levelSlicer{
     return i;
   }
   
+  //edits what is at a position X,Y in a slice that the character is in
   public int setSubSquare(int x, int y, int set){
     //sets the point in the tesseract by giving 2d cords of the slice
     int i = 0;
@@ -137,6 +151,7 @@ public class levelSlicer{
     return i;
   }
   
+  //for pushing blocks in any direction along an xy plane
   public void pushCube(int x, int y, int augment){
     //pushes a block at xy in the direcrtion augment 
     if(_rotation == 1){
@@ -170,7 +185,7 @@ public class levelSlicer{
   }
   
   public void setSquare(int x, int y, int z, int w, int set){
-    //sets the point in the tesseract via 4d point
+    //sets the point in the tesseract via an absolute/4D point
     teseract[w][z][y][x] = set;
   }
 }
