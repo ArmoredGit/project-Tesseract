@@ -158,6 +158,9 @@ public class eventTiles{
       case 45:
         p.setPlane(2);
         break;
+      case 46:
+        p.setSquare(1,2,0,0,0);
+        break;
       default:
         break;
     }
@@ -233,6 +236,9 @@ public class eventTiles{
         break;
       case 40:
         p.setSubSquare(3,7,0);
+        break;
+      case 46:
+        p.setSquare(1,2,0,0,1);
         break;
       default:
         break;
