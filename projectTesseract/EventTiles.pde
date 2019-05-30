@@ -269,9 +269,9 @@ public class eventTiles{
       case 13:
         return levelButton9;
       case 44:
-        return unrotate;
+        return rotoYoff;
       case 45:
-        return unrotate;
+        return rotoZoff;
       default:
         return button;
     }
@@ -309,9 +309,9 @@ public class eventTiles{
       case 13:
         return levelButton9;
       case 44:
-        return rotate;
+        return rotoYon;
       case 45:
-        return rotate;
+        return rotoZon;
       default:
         return pressButton;
     }

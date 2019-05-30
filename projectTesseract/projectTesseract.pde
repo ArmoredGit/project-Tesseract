@@ -29,6 +29,10 @@ PImage logo1;
 PImage keys;
 PImage rotate;
 PImage unrotate;
+PImage rotoZoff;
+PImage rotoZon;
+PImage rotoYoff;
+PImage rotoYon;
 int playState;
 int load = 0;
 String view;
@@ -146,6 +150,10 @@ void loadAll(){
   keys = loadImage("key.png");
   rotate = loadImage("PressedButtonRotate.png");
   unrotate = loadImage("unPressedButtonRotate.png");
+  rotoZoff = loadImage("rotoZoff.png");
+  rotoZon = loadImage("rotoZon.png");
+  rotoYoff = loadImage("rotoYoff.png");
+  rotoYon = loadImage("rotoYon.png");
 }
 
 //this manages input for all the classes
