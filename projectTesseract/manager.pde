@@ -1,4 +1,5 @@
-public class manager extends levelSlicer{
+ -p
+ public class manager extends levelSlicer{
   private int _tx,_ty;
   private int _size,_level;
   //this class manages the level class at a more abstacted view in order to play the main game

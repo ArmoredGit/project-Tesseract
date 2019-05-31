@@ -33,6 +33,7 @@ PImage rotoZoff;
 PImage rotoZon;
 PImage rotoYoff;
 PImage rotoYon;
+
 int playState;
 int load = 0;
 String view;
