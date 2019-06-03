@@ -164,6 +164,51 @@ public class eventTiles{
       case 47:
         p.setSquare(2,2,0,0,0);
         break;
+      case 48:
+        p.setSquare(1,0,3,0,0);
+        break;
+      case 49:
+        p.setSquare(1,1,3,0,0);
+        break;
+      case 50:
+        p.setSquare(1,3,3,0,0);
+        break;
+      case 51:
+        p.setLevel(10);
+        playState = 1;
+        break;
+      case 52:
+        p.setLevel(11);
+        playState = 1;
+        break;
+      case 53:
+        p.setLevel(12);
+        playState = 1;
+        break;
+      case 54:
+        p.setLevel(13);
+        playState = 1;
+        break;
+      case 55:
+        p.setLevel(14);
+        playState = 1;
+        break;
+      case 56:
+        p.setLevel(15);
+        playState = 1;
+        break;
+      case 57:
+        p.setLevel(16);
+        playState = 1;
+        break;
+      case 58:
+        p.setLevel(17);
+        playState = 1;
+        break;
+      case 59:
+        p.setLevel(18);
+        playState = 1;
+        break;
       default:
         break;
     }
@@ -246,6 +291,15 @@ public class eventTiles{
       case 47:
         p.setSquare(2,2,0,0,1);
         break;
+      case 48:
+        p.setSquare(1,0,3,0,6);
+        break;
+      case 49:
+        p.setSquare(1,1,3,0,6);
+        break;
+      case 50:
+        p.setSquare(1,3,3,0,1);
+        break;
       default:
         break;
     }
@@ -278,6 +332,24 @@ public class eventTiles{
         return rotoYoff;
       case 45:
         return rotoZoff;
+      case 51:
+        return levelButton1;
+      case 52:
+        return levelButton2;
+      case 53:
+        return levelButton3;
+      case 54:
+        return levelButton4;
+      case 55:
+        return levelButton5;
+      case 56:
+        return levelButton6;
+      case 57:
+        return levelButton7;
+      case 58:
+        return levelButton8;
+      case 59:
+        return levelButton9;
       default:
         return button;
     }
