@@ -34,6 +34,11 @@ public class manager extends levelSlicer{
     restart();
   }
   
+  //fixes the Y after forced rotation and things the like
+  public void fixYNow(){
+    _ty = fixY();
+  }
+  
   //sets the level to level x
   public void setLevel(int x){
     _level = x;

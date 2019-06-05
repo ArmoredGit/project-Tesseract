@@ -154,9 +154,11 @@ public class eventTiles{
         break;
       case 44:
         p.setPlane(1);
+        p.fixYNow();
         break;
       case 45:
         p.setPlane(2);
+        p.fixYNow();
         break;
       case 46:
         p.setSquare(1,2,0,0,0);
@@ -208,6 +210,11 @@ public class eventTiles{
       case 59:
         p.setLevel(18);
         playState = 1;
+        break;
+      case 60:
+        p.setSquare(4,5,5,0,6);
+        p.setSquare(5,4,5,0,6);
+        p.setSquare(5,5,4,0,6);
         break;
       default:
         break;
@@ -299,6 +306,11 @@ public class eventTiles{
         break;
       case 50:
         p.setSquare(1,3,3,0,1);
+        break;
+      case 60:
+        p.setSquare(4,5,5,0,1);
+        p.setSquare(5,4,5,0,1);
+        p.setSquare(5,5,4,0,1);
         break;
       default:
         break;
