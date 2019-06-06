@@ -216,6 +216,9 @@ public class eventTiles{
         p.setSquare(5,4,5,0,6);
         p.setSquare(5,5,4,0,6);
         break;
+      case 61:
+        p.setSquare(1,4,4,0,0);
+        break;
       default:
         break;
     }
@@ -311,6 +314,9 @@ public class eventTiles{
         p.setSquare(4,5,5,0,1);
         p.setSquare(5,4,5,0,1);
         p.setSquare(5,5,4,0,1);
+        break;
+      case 61:
+        p.setSquare(1,4,4,0,1);
         break;
       default:
         break;
