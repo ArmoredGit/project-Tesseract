@@ -179,12 +179,16 @@ void keyPressed(){
         p.move(1);
         break;
       case 81:
-        if(p.getLevel() > 18)
-        p.rotatePlane(-1);
+        if(p.getLevel() > 18){
+          p.rotatePlane(-1);
+          p.fixYNow();
+        }
         break;
       case 69:
-        if(p.getLevel() > 18)
-        p.rotatePlane(1);
+        if(p.getLevel() > 18){
+          p.rotatePlane(1);
+          p.fixYNow();
+        }
         break;
       case 82:
         p.restart();

@@ -155,10 +155,12 @@ public class eventTiles{
       case 44:
         p.setPlane(1);
         p.fixYNow();
+        System.out.print("I");
         break;
       case 45:
         p.setPlane(2);
         p.fixYNow();
+        System.out.print("J");
         break;
       case 46:
         p.setSquare(1,2,0,0,0);
