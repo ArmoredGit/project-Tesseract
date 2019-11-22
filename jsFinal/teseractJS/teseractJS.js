@@ -34,7 +34,6 @@ var rotoZoff;
 var rotoZon;
 var rotoYoff;
 var rotoYon;
-
 var playState;
 var load;
 var view;
@@ -46,7 +45,7 @@ var q;
 
 //the setup method is short in order to quickly open the program 
 function setup(){
-  size(1008,1008);
+  createCanvas(1008,1008);
   background(0);
   player = loadImage("character.png");
   load = 0;
@@ -76,7 +75,7 @@ function draw(){
       //triggers all buttons on/off
       p.triggerEvents();
       fill(255);
-      var pos = p.getCords();
+      let pos = p.getCords();
       //draws the key hvars top left
       image(keys,0,0,width/4,width/4);
       //adjust text based on level world!
