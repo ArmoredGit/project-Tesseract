@@ -111,9 +111,11 @@ class manager extends levelSlicer{
         if(getSlice()[this._tx][this._ty]%10 == 1){
           this._ty++;
         }
-        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7)
-          if(pushBlocks(4))
+        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7){
+          if(pushBlocks(4)){
             pushCube(this._tx,this._ty,4);
+          }
+        }
         break;
     }
     setSubCords(this._tx,this._ty);
