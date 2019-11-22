@@ -63,40 +63,54 @@ class manager extends levelSlicer{
     switch(direction){
       case 1:
         this._tx++;
-        if(this._tx > this._size - 1)
+        if(this._tx > this._size - 1){
           this._tx = this._size - 1;
-        if(getSlice()[this._tx][this._ty]%10 == 1)
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 1){
           this._tx--;
-        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7)
-          if(pushBlocks(1))
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7){
+          if(pushBlocks(1)){
             pushCube(this._tx,this._ty,1);
+          }
+        }
         break;
       case 2:
         this._ty++;
-        if(this._ty > this._size - 1)
+        if(this._ty > this._size - 1){
           this._ty = this._size - 1;
-        if(getSlice()[this._tx][this._ty]%10 == 1)
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 1){
           this._ty--;
-        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7)
-          if(pushBlocks(2))
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7){
+          if(pushBlocks(2)){
             pushCube(this._tx,this._ty,2);
+          }
+        }
         break;
       case 3:
         this._tx--;
-        if(this._tx < 0)
+        if(this._tx < 0){
           this._tx = 0;
-        if(getSlice()[this._tx][this._ty]%10 == 1)
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 1){
           this._tx++;
-        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7)
-          if(pushBlocks(3))
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7){
+          if(pushBlocks(3)){
             pushCube(this._tx,this._ty,3);
+          }
+        }
         break;
       case 4:
         this._ty--;
-        if(this._ty < 0)
+        if(this._ty < 0){
           this._ty = 0;
-        if(getSlice()[this._tx][this._ty]%10 == 1)
+        }
+        if(getSlice()[this._tx][this._ty]%10 == 1){
           this._ty++;
+        }
         if(getSlice()[this._tx][this._ty]%10 == 3 || getSlice()[this._tx][this._ty]%10 == 7)
           if(pushBlocks(4))
             pushCube(this._tx,this._ty,4);
