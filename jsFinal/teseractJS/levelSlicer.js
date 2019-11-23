@@ -6,7 +6,7 @@ class levelSlicer {
   //private var this._w;
   //private var[][][][] this.teseract;
   //level is the base class for master class for manager and menu
-  //level holds, modifies, and outputs this.views of squares, cubes, and tesseracts
+  //level holds, modifies, and outputs views of squares, cubes, and tesseracts
 
   //the constucter saves all variables needed and prepares the tesseract array for the level
   constructor( size, plane, planes) {
@@ -14,7 +14,7 @@ class levelSlicer {
     this._planeCount = planes;
     this._rotation = plane;
     this.teseract = [];
-    this.view = "X/Y";
+    view = "X/Y";
     this._x = 0;
     this._y = 0;
     this._z = 0;
@@ -27,7 +27,7 @@ class levelSlicer {
     this._planeCount = planes;
     this._rotation = plane;
     this.teseract = [];
-    this.view = "X/Y";
+    view = "X/Y";
     this._x = 0;
     this._y = 0;
     this._z = 0;
@@ -71,7 +71,7 @@ class levelSlicer {
     }
   }
 
-  //returns a square slice from the players current this.view 
+  //returns a square slice from the players current view 
   getSlice() {
     // get the 2D slice of the tesseract
     let arr = [];
@@ -90,7 +90,7 @@ class levelSlicer {
     return arr;
   }
 
-  //rotates to the next this.view 
+  //rotates to the next view 
   rotatePlane( r) {
     this._rotation += r;
     if (this._rotation < 1){
@@ -102,22 +102,22 @@ class levelSlicer {
     //swaps to the next plane ex. xy to xz
   }
 
-  //sets the 2D this.view
+  //sets the 2D view
   setPlane( r) {
     this._rotation = r;
     //swaps to the next plane ex. xy to xz
   }
 
-  //when the player rotates this fixes their non X position in 2D and edits the this.view
+  //when the player rotates this fixes their non X position in 2D and edits the view
   fixY() {
     if (this._rotation == 1) {
-      this.view = "X/Y";
+      view = "X/Y";
       return this._y;
     } else if (this._rotation == 2) {
-      this.view = "X/Z";
+      view = "X/Z";
       return this._z;
     } else if (this._rotation == 3) {
-      this.view = "X/W";
+      view = "X/W";
       return this._w;
     }
     return this._y;

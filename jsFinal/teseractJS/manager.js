@@ -191,7 +191,7 @@ class manager extends levelSlicer {
         } else if (arr[i][j]%10 == 3) {
           image(Block, i * w / l, a + j * w / l, w / l, w / l);
         } else if (arr[i][j]%10 == 4) {
-          image(e.eventdraw(arr[i][j]/10), i * w / l, a + j * w / l, w / l, w / l);
+          image(e.eventdraw(floor(arr[i][j]/10)), i * w / l, a + j * w / l, w / l, w / l);
         } else if (arr[i][j]%10 == 5) {
           image(lava, i * w / l, a + j * w / l, w / l, w / l);
         } else if (arr[i][j]%10 == 6) {
@@ -206,7 +206,7 @@ class manager extends levelSlicer {
       }
     }
     if (super.getSlice()[this._tx][this._ty]%10 == 4) {
-      image(e.pActiveEventdraw(arr[this._tx][this._ty]/10), this._tx * w / l, a + this._ty * w / l, w / l, w / l);
+      image(e.pActiveEventdraw(floor(arr[this._tx][this._ty]/10)), this._tx * w / l, a + this._ty * w / l, w / l, w / l);
     }
     fill(250);
     image(player, this._tx * w / l, a + this._ty * w / l, w / l, w / l);
@@ -227,14 +227,14 @@ class manager extends levelSlicer {
     for (let i = 0; i < l; i++) {
       for (let j = 0; j < l; j++) {
         if ((arr[i][j]%10 == 4 && this._tx == i && this._ty == j) || (arr[i][j]%10 == 7)) {
-          e.event(floor(arr[i][j]/10));
+          e.event(floor(super.getSlice()[i][j]/10));
         }
       }
     }
 
     for (let i = 0; i < l; i++) {
       for (let j = 0; j < l; j++) {
-        if ((arr[j][i]%10 != 4 || this._tx != j || this._ty != i) && (arr[j][i]%10 != 7)) {
+        if (arr[j][i]%10 == 4 && (this._tx != j || this._ty != i)) {
           e.undoEvent(floor(arr[j][i]/10));
         }
       }

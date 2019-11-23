@@ -116,12 +116,12 @@ class Menu extends levelSlicer {
           }
         }
         if (arr[i][j]%10 == 4) {
-          image(e.eventdraw(arr[i][j]/10), i * w / l, a + j * w / l, w / l, w / l);
+          image(e.eventdraw(floor(arr[i][j]/10)), i * w / l, a + j * w / l, w / l, w / l);
         }
       }
     }
     if (super.getSlice()[this._tx][this._ty]%10 == 4) {
-      image(e.pActiveEventdraw(arr[this._tx][this._ty]/10), this._tx * w / l, a + this._ty * w / l, w / l, w / l);
+      image(e.pActiveEventdraw(floor(arr[this._tx][this._ty]/10)), this._tx * w / l, a + this._ty * w / l, w / l, w / l);
     }
     fill(250);
     image(player, this._tx * w / l, a + this._ty * w / l, w / l, w / l);

@@ -127,6 +127,7 @@ function loadAll() {
   p = new manager(0, 0, 1);
   e = new eventTiles();
   m = new Menu();
+  view = "x/y";
   evenFloor = loadImage("evenFloor.png");
   button = loadImage("unPressedButton.png");
   evenWall = loadImage("evenWall.png");
