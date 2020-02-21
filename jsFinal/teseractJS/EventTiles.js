@@ -219,6 +219,11 @@ class eventTiles {
     case 61:
       p.setSquare(1, 4, 4, 0, 0);
       break;
+      //cube 7 
+    case 62:
+      p.setSquare(1, 4, 4, 0, 0);
+      break;
+      
     default:
       break;
     }
