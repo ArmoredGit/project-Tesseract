@@ -221,7 +221,7 @@ class eventTiles {
       break;
       //cube 7 
     case 62:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 4, 2, 0, 0);
       break;
     case 63:
       p.setSquare(3, 3, 5, 0, 0);
@@ -236,55 +236,55 @@ class eventTiles {
       p.setSquare(1, 2, 0, 0, 0);
       break;
     case 67:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(5, 2, 2, 0, 0);
       break;
     case 68:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(0, 2, 0, 0, 0);
       break;
     case 69:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 0, 2, 0, 0);
       break;
     case 70:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(5, 1, 2, 0, 0);
       break;
     case 71:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(0, 2, 2, 0, 0);
       break;
     case 72:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(5, 0, 5, 0, 6);
       break;
     case 73:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(2, 3, 2, 0, 6);
       break;
     case 75:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 1, 0, 0, 0);
       break;
     case 76:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(3, 1, 0, 0, 6);
       break;
     case 77:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(4, 1, 0, 0, 6);
       break;
     case 78:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(4, 3, 0, 0, 6);
       break;
     case 79:
-      p.setSquare(3, 3, 5, 0, 1);
+      p.setSquare(2, 5, 5, 0, 1);
       break;
     case 80:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(0, 4, 5, 0, 6);
       break;
     case 81:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 1, 5, 0, 0);
       break;
     case 82:
-      p.setSquare(3, 3, 5, 0, 6);
+      p.setSquare(1, 3, 5, 0, 6);
       break;
     case 83:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 1, 5, 0, 0);
       break;
     case 84:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 1, 5, 0, 0);
       break;
       
     default:
@@ -388,73 +388,74 @@ class eventTiles {
       break;
       //cube 7 
     case 62:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 4, 2, 0, 1);
       break;
     case 63:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 3, 5, 0, 5);
       break;
     case 64:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 1, 2, 0, 1);
       break;
     case 65:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 3, 2, 0, 1);
       break;
     case 66:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 2, 0, 0, 6);
       break;
     case 67:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(5, 2, 2, 0, 1);
       break;
     case 68:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(0, 2, 0, 0, 6);
       break;
     case 69:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 0, 2, 0, 1);
       break;
     case 70:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(5, 1, 2, 0, 5);
       break;
     case 71:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(0, 2, 2, 0, 1);
       break;
     case 72:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(5, 0, 5, 0, 1);
       break;
     case 73:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 3, 2, 0, 5);
       break;
     case 74:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 3, 2, 0, 0);
       break;
     case 75:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 1, 0, 0, 6);
       break;
     case 76:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 1, 0, 0, 0);
       break;
     case 77:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(4, 1, 0, 0, 0);
       break;
     case 78:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(4, 3, 0, 0, 0);
       break;
     case 79:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 5, 5, 0, 0);
+      p.setSquare(0, 0, 2, 0, 5);
       break;
     case 80:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(0, 4, 5, 0, 1);
       break;
     case 81:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 1, 5, 0, 5);
       break;
     case 82:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(1, 3, 5, 0, 1);
       break;
     case 83:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(2, 1, 5, 0, 5);
       break;
     case 84:
-      p.setSquare(3, 3, 5, 0, 0);
+      p.setSquare(3, 1, 5, 0, 5);
       break;
     default:
       break;
